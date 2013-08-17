@@ -1,3 +1,4 @@
+import javax.ws.rs.core.Response
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -27,8 +28,8 @@ public class HelloWorldResource {
 	@Path("test")
 	@GET
 	@Produces("text/plain")
-	public String test() {
-		return "test";
+	public Response test() {
+		return  Response.ok("test").build();
 	}
 }
 
