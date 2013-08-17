@@ -14,12 +14,21 @@ import com.sun.net.httpserver.HttpServer;
 
 @Path("helloworld")
 public class HelloWorldResource {
-	final String CLICHED_MESSAGE = "Hello World!";
 
+
+	@Path("hello")
 	@GET
 	@Produces("text/plain")
 	public String getHello() {
-		return CLICHED_MESSAGE;
+		return "Hello World";
+	}
+
+
+	@Path("test")
+	@GET
+	@Produces("text/plain")
+	public String test() {
+		return "test";
 	}
 }
 
